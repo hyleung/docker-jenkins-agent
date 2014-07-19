@@ -23,5 +23,8 @@ RUN echo "jenkins:jenkins" | chpasswd
 ##Expose the SSHD port
 EXPOSE 22
 
+#Install Git
+RUN apt-get install -y git
+
 CMD ["/usr/sbin/sshd","-D"]
 
